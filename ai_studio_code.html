@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snapsign Sport Photography - Sumbawa</title>
+  
+  <!-- Font & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-color: #0B1E2D;
+      --card-bg: #112233;
+      --primary: #00C9A7;
+      --accent: #FFD166;
+      --text-light: #F0F8FF;
+      --text-dim: #8BA3B8;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+
+    /* Header Section */
+    header {
+      text-align: center;
+      padding: 40px 0 20px;
+    }
+    .brand-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: 2px;
+      line-height: 1;
+    }
+    .brand-sub {
+      font-size: 0.8rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+    .hero em { color: var(--primary); font-style: normal; }
+
+    /* Action Links (Linktree Style) */
+    .action-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+    .link-btn {
+      background: var(--card-bg);
+      border: 1px solid #1E3A52;
+      color: var(--text-light);
+      padding: 16px;
+      border-radius: 12px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .link-btn:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+    .link-btn.featured {
+      background: var(--primary);
+      color: var(--bg-color);
+      border: none;
+    }
+
+    /* Price Section */
+    .section-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--primary);
+      display: inline-block;
+    }
+
+    .packages {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .pkg-card {
+      background: var(--card-bg);
+      border: 1px solid #1E3A52;
+      border-radius: 15px;
+      padding: 25px;
+      position: relative;
+    }
+    .pkg-card.popular {
+      border: 2px solid var(--primary);
+    }
+    .badge {
+      position: absolute;
+      top: -12px;
+      right: 20px;
+      background: var(--primary);
+      color: var(--bg-color);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 700;
+    }
+    .pkg-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.5rem; margin-bottom: 5px; }
+    .pkg-price { font-size: 1.8rem; font-weight: 700; color: var(--accent); margin-bottom: 15px; }
+    .pkg-price span { font-size: 0.9rem; color: var(--text-dim); }
+
+    .feat-list { list-style: none; margin-bottom: 20px; }
+    .feat-list li { font-size: 0.9rem; color: var(--text-dim); margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+    .feat-list li i { color: var(--primary); font-size: 0.8rem; }
+
+    .book-btn {
+      display: block;
+      text-align: center;
+      background: transparent;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      padding: 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .book-btn:hover {
+      background: var(--primary);
+      color: var(--bg-color);
+    }
+
+    /* Floating WA */
+    .wa-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      z-index: 1000;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      color: var(--text-dim);
+      font-size: 0.8rem;
+    }
+
+    /* Desktop View */
+    @media (min-width: 600px) {
+      .packages { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="brand-logo">SNAPSIGN</div>
+      <div class="brand-sub">Sport Photography · Sumbawa</div>
+    </header>
+
+    <div class="hero">
+      <h1>ABADIKAN <em>SETIAP</em> MOMEN TERBAIK</h1>
+    </div>
+
+    <div class="action-links">
+      <a href="https://instagram.com/snapsign.id" class="link-btn" target="_blank">
+        <i class="fab fa-instagram"></i> Portofolio Instagram
+      </a>
+      <a href="https://wa.me/6289517449289?text=Halo%20Snapsign,%20saya%20ingin%20tanya%20jadwal%20foto" class="link-btn featured">
+        <i class="fas fa-calendar-check"></i> Booking Jadwal Sekarang
+      </a>
+    </div>
+
+    <h2 class="section-title">Pilihan Paket</h2>
+
+    <div class="packages">
+      <!-- Basic -->
+      <div class="pkg-card">
+        <div class="pkg-name">BASIC</div>
+        <div class="pkg-price">Rp 50rb <span>/ 10 Menit</span></div>
+        <ul class="feat-list">
+          <li><i class="fas fa-check"></i> 15-25 Foto Pilihan</li>
+          <li><i class="fas fa-check"></i> Editing & Color Grading</li>
+          <li><i class="fas fa-check"></i> Selesai 2 Hari Kerja</li>
+        </ul>
+        <a href="https://wa.me/6289517449289?text=Halo%20Snapsign,%20saya%20tertarik%20paket%20BASIC" class="book-btn">Pilih Paket</a>
+      </div>
+
+      <!-- Pro -->
+      <div class="pkg-card popular">
+        <div class="badge">PALING POPULER</div>
+        <div class="pkg-name">PRO</div>
+        <div class="pkg-price">Rp 600rb <span>/ 3 Jam</span></div>
+        <ul class="feat-list">
+          <li><i class="fas fa-check"></i> 100-150 Foto Premium</li>
+          <li><i class="fas fa-check"></i> Editing Retouching</li>
+          <li><i class="fas fa-check"></i> Selesai 1 Hari Kerja</li>
+        </ul>
+        <a href="https://wa.me/6289517449289?text=Halo%20Snapsign,%20saya%20tertarik%20paket%20PRO" class="book-btn">Pilih Paket</a>
+      </div>
+
+      <!-- Standard -->
+      <div class="pkg-card">
+        <div class="pkg-name">STANDARD</div>
+        <div class="pkg-price">Rp 350rb <span>/ 1 Jam</span></div>
+        <ul class="feat-list">
+          <li><i class="fas fa-check"></i> 50-80 Foto Pilihan</li>
+          <li><i class="fas fa-check"></i> Editing Profesional</li>
+          <li><i class="fas fa-check"></i> Selesai 1 Hari Kerja</li>
+        </ul>
+        <a href="https://wa.me/6289517449289?text=Halo%20Snapsign,%20saya%20tertarik%20paket%20STANDARD" class="book-btn">Pilih Paket</a>
+      </div>
+
+      <!-- Full Day -->
+      <div class="pkg-card">
+        <div class="pkg-name">FULL DAY</div>
+        <div class="pkg-price">Rp 1.2jt <span>/ 8 Jam</span></div>
+        <ul class="feat-list">
+          <li><i class="fas fa-check"></i> 200+ Foto Eksklusif</li>
+          <li><i class="fas fa-check"></i> Editing Sinematik</li>
+          <li><i class="fas fa-check"></i> Bonus Video Highlight</li>
+        </ul>
+        <a href="https://wa.me/6289517449289?text=Halo%20Snapsign,%20saya%20tertarik%20paket%20FULL%20DAY" class="book-btn">Pilih Paket</a>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Snapsign Sport Photography.</p>
+      <p>Sumbawa, Nusa Tenggara Barat.</p>
+    </footer>
+  </div>
+
+  <!-- WA Floating Button -->
+  <a href="https://wa.me/6289517449289" class="wa-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+</body>
+</html>
